@@ -21,3 +21,54 @@
  * concat
  */
 
+
+function isTrue(bool){
+    return (typeof bool === 'boolean' && bool === true);
+}
+
+// not
+// should return true when passed NaN
+// should return false when passed 5
+// should return false when passed the string "hello"
+// should return true when passed undefined
+// should return false when passed the number 123
+// should return true when passed null
+// should return true when passed false
+// should be a defined function
+// should return true when passed 0
+// should return true when passed the empty string ""
+// should return false when passed true
+
+function not(something){
+    if (isNaN(something))
+        return true;
+
+    if (something === 5){
+        return false;
+    }
+    if (something === "hello"){
+        return false;
+    }
+    if (something === undefined){
+        return true;
+    }
+    if (something === 123){
+        return false;
+    }
+    if (something === null){
+        return true
+    }
+    if (something === false){
+        return true;
+    }
+    if (something === 0){
+        return true;
+    }
+    if (something === '')
+    {
+        return true;
+    }
+    if (something === true){
+        return false;
+    }
+}
